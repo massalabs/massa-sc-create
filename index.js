@@ -40,5 +40,5 @@ delete package_json.private;
 writeFileSync(`${cwd}/package.json`, JSON.stringify(package_json, null, 2));
 // Install NPM dependencies
 log("Installing packages. This might take a couple of minutes...");
-execSync(`cd ${cwd} && npm install`);
+execSync(`cd ${cwd} && npm install --legacy-peer-deps`);
 log(`Happy hacking! 🤖`);
